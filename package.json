@@ -1,0 +1,25 @@
+{
+  "name": "@implydata/im-code-style",
+  "version": "0.0.0",
+  "description": "Style guidelines for imply front-end code",
+  "main": "index.js",
+  "bin": {
+    "check-code-style": "bin/check-code-style"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/implydata/im-code-style.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/implydata/im-code-style/issues"
+  },
+  "homepage": "https://github.com/implydata/im-code-style#readme",
+  "dependencies": {
+    "tslint": "5.11.0"
+  }
+}

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+git diff --cached --name-only | grep -E '\.tsx?$' | xargs tslint -c "`dirname $BASH_SOURCE`/../tslint-loose.json"
