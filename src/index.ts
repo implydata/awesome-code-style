@@ -17,7 +17,7 @@ const paths = {
 
 async function getAllFiles() {
   const p = new Promise((yes, no) => {
-    glob(path.resolve(cwd ,'./src/**/*.{ts,tsx}'), (error, files) => {
+    glob(path.resolve(cwd, './src/**/*.{ts,tsx}'), (error, files) => {
       if (error) {
         no(error);
       } else {
@@ -26,22 +26,22 @@ async function getAllFiles() {
     });
   });
 
-  return spinPromise(p, 'Getting all TypeScript files...');
+  return spinPromise(p, 'Getting all TypeScript files...') as Promise<string[]>;
 }
 
 async function getGitDiff() {
   const p = new Promise((yes, no) => {
-    exec("git diff --cached --name-only | grep -E '\.tsx?$'", (error, stdout, stderr) => {
+    exec("git diff --cached --name-only", (error, stdout, stderr) => {
       if (error) {
         console.log(error);
         no(error);
       } else {
-        yes(stdout.split('\n').filter(Boolean));
+        yes(stdout.split('\n').filter(line => /\.tsx?$/.test(line)));
       }
     });
   });
 
-  return spinPromise(p, 'Getting changed files...');
+  return spinPromise(p, 'Getting changed files...') as Promise<string[]>;
 }
 
 function formatError(result: LintResult) {
@@ -76,7 +76,12 @@ async function lintStuff(files: string[], strict = false) {
 export async function check(all = false, strict = false) {
   const files = all ? await getAllFiles() : await getGitDiff();
 
-  return lintStuff(files as string[], strict)
+  if (files.length === 0) {
+    console.log('Nothing to lint, try with --all');
+    process.exit(0);
+  }
+
+  return lintStuff(files, strict)
     .catch(errors => {
       console.error(errors);
       process.exit(1);
