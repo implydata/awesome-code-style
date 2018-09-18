@@ -1,3 +1,23 @@
-#!/bin/bash
+#!/usr/bin/env node
 
-git diff --cached --name-only | grep -E '\.tsx?$' | xargs tslint -c "`dirname $BASH_SOURCE`/../tslint-loose.json"
+const yargs = require('yargs');
+
+const argv = yargs
+  .option('strict', {
+    alias: 's',
+    default: false
+  })
+
+  .option('all', {
+    alias: 'a',
+    default: false
+  })
+
+  .help('h')
+  .alias('h', 'help')
+
+  .argv;
+
+const { check } = require('../dist/index.js');
+
+check(argv.all, argv.strict);
