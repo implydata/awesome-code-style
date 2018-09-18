@@ -1,16 +1,24 @@
 #!/usr/bin/env node
 
+const path = require('path');
 const yargs = require('yargs');
+const glob = require('glob');
+
+const validLevels = glob.sync(path.resolve(__dirname, '../rules/*.json'))
+  .map(f => +path.basename(f, '.json'));
 
 const argv = yargs
-  .option('strict', {
-    alias: 's',
-    default: false
+  .option('level', {
+    alias: 'l',
+    default: 0,
+    choices: validLevels,
+    description: `Strictness level, higher is stricter`
   })
 
   .option('all', {
     alias: 'a',
-    default: false
+    default: false,
+    description: `Lint all files instead of just what's staged for commit`
   })
 
   .help('h')
@@ -20,4 +28,4 @@ const argv = yargs
 
 const { check } = require('../dist/index.js');
 
-check(argv.all, argv.strict);
+check(argv.all, argv.level);

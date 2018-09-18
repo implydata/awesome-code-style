@@ -51,9 +51,9 @@ function formatError(result: LintResult) {
   return formatter.format(result.failures);
 }
 
-async function lintStuff(files: string[], strict = false) {
+async function lintStuff(files: string[], level: number) {
   const linter = new Linter({fix: false});
-  const configuration = Configuration.findConfiguration(strict ? paths.strictConfig : paths.looseConfig).results;
+  const configuration = Configuration.findConfiguration(path.resolve(__dirname, `../rules/${level}.json`)).results;
 
   files.forEach(fileName => {
     const content = fs.readFileSync(fileName, "utf8");
@@ -70,20 +70,23 @@ async function lintStuff(files: string[], strict = false) {
     }
   });
 
-  return spinPromise(p, 'Linting files...');
+  return spinPromise(p, `Linting files with rules level ${level}...`);
 }
 
-export async function check(all = false, strict = false) {
+export async function check(all = false, level = 0) {
   const files = all ? await getAllFiles() : await getGitDiff();
 
   if (files.length === 0) {
-    console.log('Nothing to lint, try with --all');
+    console.log('Found no files to lint, exiting with 0');
     process.exit(0);
   }
 
-  return lintStuff(files, strict)
+  return lintStuff(files, level)
     .catch(errors => {
       console.error(errors);
       process.exit(1);
+    })
+    .then(() => {
+      console.log('Done.');
     });
 }

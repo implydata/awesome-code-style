@@ -1,0 +1,10 @@
+{
+    "defaultSeverity": "error",
+    "extends": "./5.json",
+    "jsRules": {},
+    "rules": {
+      "prefer-const": false,
+      "no-conditional-assignment": false
+    },
+    "rulesDirectory": []
+}

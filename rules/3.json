@@ -1,0 +1,11 @@
+{
+    "defaultSeverity": "error",
+    "extends": "./4.json",
+    "jsRules": {},
+    "rules": {
+      "prefer-const": false,
+      "variable-name": false,
+      "no-conditional-assignment": false
+    },
+    "rulesDirectory": []
+}

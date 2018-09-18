@@ -1,9 +1,8 @@
 {
     "defaultSeverity": "error",
-    "extends": "./tslint-strict.json",
+    "extends": "./2.json",
     "jsRules": {},
     "rules": {
-      "quotemark": false,
       "prefer-const": false,
       "no-shadowed-variable": false,
       "variable-name": false,
