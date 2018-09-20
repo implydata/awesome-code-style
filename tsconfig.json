@@ -22,6 +22,7 @@
   "include": [
   ],
   "files": [
-    "src/index.ts"
+    "src/index.ts",
+    "src/bend-rules.ts"
   ]
 }

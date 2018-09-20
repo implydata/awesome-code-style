@@ -1,7 +1,6 @@
 import * as process from 'process';
 import * as path from 'path';
 import { exec } from 'child_process';
-import * as yargs from 'yargs';
 import * as fs from 'fs-extra';
 import * as glob from 'glob';
 import spinPromise from 'spin-promise';
