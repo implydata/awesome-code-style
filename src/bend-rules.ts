@@ -18,6 +18,12 @@ const argv = yargs
     description: 'Verbose'
   })
 
+  .option('folder', {
+    alias: 'f'
+  })
+
+  .demandOption(['folder'])
+
   .help('h')
   .alias('h', 'help')
 
@@ -32,7 +38,10 @@ function shiftIndex(str: string, inc = 1) {
 }
 
 async function getRuleFiles() {
-  const files = await glob(path.resolve(__dirname, '../rules/*.json'));
+  const p = path.resolve(path.join(process.cwd(), argv.folder, '/*.json'));
+  const files = await glob(p);
+
+  if (argv.verbose) console.log('Got rules files : ' + files);
 
   files.sort((a, b) => getIndex(b) - getIndex(a));
 

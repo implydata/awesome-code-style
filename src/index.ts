@@ -7,18 +7,24 @@ import spinPromise from 'spin-promise';
 
 // tslint --fix -c node_modules/\@implydata/im-code-style/rules/0.json 'src/**/*.ts?(x)'
 
-import { Linter, Configuration, LintResult, findFormatter } from 'tslint';
+import * as tslint from 'tslint';
+import * as stylelint from 'stylelint';
+
+export interface Options {
+  tsLevel: number;
+  scssLevel: number;
+  all?: boolean;
+}
 
 const cwd = process.cwd();
 
-const paths = {
-  strictConfig: path.resolve(__dirname, '../rules/tslint-strict.json'),
-  looseConfig: path.resolve(__dirname, '../rules/tslint-loose.json')
-};
+const tsFileRegExp = /\.tsx?$/
+const scssFileRegExp = /\.scss$/
+const bothFileRegExp = /\.(tsx?|scss)$/;
 
 async function getAllFiles() {
   const p = new Promise((yes, no) => {
-    glob(path.resolve(cwd, './src/**/*.{ts,tsx}'), (error, files) => {
+    glob(path.resolve(cwd, './src/**/*.{ts,tsx,scss}'), (error, files) => {
       if (error) {
         no(error);
       } else {
@@ -27,7 +33,7 @@ async function getAllFiles() {
     });
   });
 
-  return spinPromise(p, 'Getting all TypeScript files...') as Promise<string[]>;
+  return spinPromise(p, 'Getting all TS and SCSS files...') as Promise<string[]>;
 }
 
 async function getGitDiff() {
@@ -37,7 +43,7 @@ async function getGitDiff() {
         console.log(error);
         no(error);
       } else {
-        yes(stdout.split('\n').filter(line => /\.tsx?$/.test(line)));
+        yes(stdout.split('\n').filter(line => bothFileRegExp.test(line)));
       }
     });
   });
@@ -45,18 +51,20 @@ async function getGitDiff() {
   return spinPromise(p, 'Getting changed files...') as Promise<string[]>;
 }
 
-function formatError(result: LintResult) {
-  const formatterConstructor = findFormatter('prose');
+function formatTSError(result: tslint.LintResult) {
+  const formatterConstructor = tslint.findFormatter('prose');
   const formatter = new formatterConstructor();
 
   return formatter.format(result.failures);
 }
 
-async function lintStuff(files: string[], level: number) {
-  const linter = new Linter({fix: false});
-  const configuration = Configuration.findConfiguration(path.resolve(__dirname, `../rules/${level}.json`)).results;
+async function tsLintStuff(files: string[], level: number) {
+  const linter = new tslint.Linter({fix: false});
+  const configuration = tslint.Configuration.findConfiguration(path.resolve(__dirname, `../rules/ts/${level}.json`)).results;
 
   files.forEach(fileName => {
+    if (!tsFileRegExp.test(fileName)) return;
+
     const content = fs.readFileSync(fileName, "utf8");
     linter.lint(fileName, content, configuration);
   });
@@ -65,16 +73,34 @@ async function lintStuff(files: string[], level: number) {
 
   const p = new Promise((yes, no) => {
     if (result.errorCount > 0) {
-      no(formatError(result));
+      no(formatTSError(result));
     } else {
       yes(0);
     }
   });
 
-  return spinPromise(p, `Linting files with rules level ${level}...`);
+  return spinPromise(p, `Linting TS files with rules level ${level}...`);
 }
 
-export async function check(all = false, level = 0) {
+function formatScssError(result: stylelint.LinterResult) {
+  console.log(stylelint.formatters.string(result.results));
+}
+
+async function styleLintStuff(files: string[], level: number) {
+  const config = require(path.resolve(__dirname, `../rules/scss/${level}.json`));
+
+  const p = stylelint.lint({
+    configBasedir: path.resolve(__dirname, '../rules/scss/'),
+    config,
+    files: files.filter(f => scssFileRegExp.test(f))
+  }).then(formatScssError);
+
+  return spinPromise(p, `Linting SCSS files with rules level ${level}...`);
+}
+
+export async function check(options: Options) {
+  const { all, tsLevel, scssLevel } = options;
+
   const files = all ? await getAllFiles() : await getGitDiff();
 
   if (files.length === 0) {
@@ -82,7 +108,10 @@ export async function check(all = false, level = 0) {
     process.exit(0);
   }
 
-  return lintStuff(files, level)
+  return Promise.all([
+    tsLintStuff(files, tsLevel),
+    styleLintStuff(files, scssLevel)
+  ])
     .catch(errors => {
       console.error(errors);
       process.exit(1);
