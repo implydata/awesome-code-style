@@ -1,13 +1,14 @@
 {
-    "defaultSeverity": "error",
-    "extends": "./2.json",
-    "jsRules": {},
-    "rules": {
-      "prefer-const": false,
-      "no-shadowed-variable": false,
-      "variable-name": false,
-      "max-classes-per-file": false,
-      "no-conditional-assignment": false
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": "./2.json",
+  "jsRules": {},
+  "rules": {
+    "quotemark": false,
+    "prefer-const": false,
+    "no-shadowed-variable": false,
+    "variable-name": false,
+    "max-classes-per-file": false,
+    "no-conditional-assignment": false
+  },
+  "rulesDirectory": []
 }

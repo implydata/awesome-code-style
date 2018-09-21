@@ -1,31 +1,9 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-      "tslint:recommended"
-    ],
-    "jsRules": {},
-    "rules": {
-      "quotemark": [true, "single", "jsx-double"],
-      "interface-name": [false],
-      "curly": [true, "ignore-same-line"],
-      "max-line-length": [false],
-      "no-consecutive-blank-lines": [true, 2],
-      "ordered-imports": false,
-      "object-literal-sort-keys": false,
-      "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
-      "no-empty": [false],
-      "arrow-parens": false,
-      "member-access": false,
-      "member-ordering": [false],
-      "completed-docs": false,
-      "jsdoc-format": false,
-      "prefer-for-of": false,
-      "only-arrow-functions": false,
-      "no-console": false,
-      "array-type": false,
-      "no-empty-interface": false,
-      "object-literal-key-quotes": [true, "as-needed"],
-      "forin": false
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": "./7.json",
+  "jsRules": {},
+  "rules": {
+    "no-conditional-assignment": false
+  },
+  "rulesDirectory": []
 }

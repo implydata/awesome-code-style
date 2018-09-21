@@ -1,11 +1,12 @@
 {
-    "defaultSeverity": "error",
-    "extends": "./4.json",
-    "jsRules": {},
-    "rules": {
-      "prefer-const": false,
-      "variable-name": false,
-      "no-conditional-assignment": false
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": "./4.json",
+  "jsRules": {},
+  "rules": {
+    "prefer-const": false,
+    "variable-name": false,
+    "max-classes-per-file": false,
+    "no-conditional-assignment": false
+  },
+  "rulesDirectory": []
 }

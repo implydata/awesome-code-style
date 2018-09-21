@@ -5,6 +5,8 @@ import * as fs from 'fs-extra';
 import * as glob from 'glob';
 import spinPromise from 'spin-promise';
 
+// tslint --fix -c node_modules/\@implydata/im-code-style/rules/0.json 'src/**/*.ts?(x)'
+
 import { Linter, Configuration, LintResult, findFormatter } from 'tslint';
 
 const cwd = process.cwd();
