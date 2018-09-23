@@ -83,7 +83,7 @@ async function tsLintStuff(files: string[], level: number) {
 }
 
 function formatScssError(result: stylelint.LinterResult) {
-  console.log(stylelint.formatters.string(result.results));
+  return stylelint.formatters.string(result.results);
 }
 
 async function styleLintStuff(files: string[], level: number) {
@@ -93,7 +93,10 @@ async function styleLintStuff(files: string[], level: number) {
     configBasedir: path.resolve(__dirname, '../rules/scss/'),
     config,
     files: files.filter(f => scssFileRegExp.test(f))
-  }).then(formatScssError);
+  })
+  .then(result => {
+    if (result.errored) throw Error(formatScssError(result));
+  });
 
   return spinPromise(p, `Linting SCSS files with rules level ${level}...`);
 }
