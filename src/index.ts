@@ -38,7 +38,7 @@ async function getAllFiles() {
 
 async function getGitDiff() {
   const p = new Promise((yes, no) => {
-    exec("git diff --cached --diff-filter=ACM --name-only", (error, stdout, stderr) => {
+    exec("git diff --cached --diff-filter=ACMR --name-only", (error, stdout, stderr) => {
       if (error) {
         console.log(error);
         no(error);
