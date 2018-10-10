@@ -1,6 +1,6 @@
 {
   "name": "@implydata/im-code-style",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Style guidelines for imply front-end code",
   "main": "index.js",
   "files": [
