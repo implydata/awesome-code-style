@@ -1,6 +1,6 @@
 {
   "name": "@implydata/im-code-style",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Style guidelines for imply front-end code",
   "scripts": {
     "test": "exit 0"
