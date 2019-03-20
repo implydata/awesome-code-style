@@ -1,9 +1,0 @@
-{
-  "defaultSeverity": "error",
-  "extends": "./7.json",
-  "jsRules": {},
-  "rules": {
-    "no-conditional-assignment": false
-  },
-  "rulesDirectory": []
-}
