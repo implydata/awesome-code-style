@@ -6,7 +6,7 @@
   ],
   "jsRules": {},
   "rules": {
-    "quotemark": [true, "single", "jsx-double"],
+    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
     "interface-name": [false],
     "curly": [true, "ignore-same-line"],
     "max-line-length": [false],
