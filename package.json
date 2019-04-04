@@ -1,20 +1,20 @@
 {
   "name": "awesome-code-style",
   "version": "1.1.4",
-  "description": "Style guidelines for imply front-end code",
+  "description": "Style guidelines for your favorite projects that use TypeScript and SCSS",
   "scripts": {
     "test": "exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/implydata/im-code-style.git"
+    "url": "git+https://github.com/implydata/awesome-code-style.git"
   },
   "author": "Imply Data",
-  "license": "Imply",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/implydata/im-code-style/issues"
+    "url": "https://github.com/implydata/awesome-code-style/issues"
   },
-  "homepage": "https://github.com/implydata/im-code-style#readme",
+  "homepage": "https://github.com/implydata/awesome-code-style#readme",
   "dependencies": {
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-scss": "^3.5.4",
