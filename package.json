@@ -1,5 +1,5 @@
 {
-  "name": "@implydata/im-code-style",
+  "name": "awesome-code-style",
   "version": "1.1.3",
   "description": "Style guidelines for imply front-end code",
   "scripts": {
