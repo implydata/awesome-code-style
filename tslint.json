@@ -34,7 +34,6 @@
       ["Number", "Do you mean 'number'?"]
     ],
     "prefer-const": [true, {"destructuring": "all"}],
-    "file-header": [true, "Copyright \\(c\\) 2019 Imply Data, Inc\\. All rights reserved\\."],
     "ordered-imports": [
       true,
       {
