@@ -65,9 +65,7 @@
       "check-rest-spread",
       "check-type",
       "check-typecast",
-      "check-type-operator",
-      "check-preblock",
-      "check-postbrace"
+      "check-type-operator"
     ],
     "jsx-alignment": true,
     "jsx-boolean-value": [true, "never"],
