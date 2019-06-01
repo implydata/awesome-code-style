@@ -28,6 +28,7 @@
     "no-empty-interface": false,
     "forin": false,
     "indent": [true, "spaces", 2],
+    "ter-indent": [true, 2],
     "ban-types": [true,
       ["Object", "Use {} instead."],
       ["String", "Do you mean 'string'?"],
