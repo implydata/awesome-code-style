@@ -28,7 +28,7 @@
     "no-empty-interface": false,
     "forin": false,
     "indent": [true, "spaces", 2],
-    "ter-indent": [true, 2],
+    "ter-indent": [true, 2, { "SwitchCase": 1 }],
     "ban-types": [true,
       ["Object", "Use {} instead."],
       ["String", "Do you mean 'string'?"],
@@ -67,6 +67,6 @@
     "jsx-wrap-multiline": false
   },
   "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
+    "../tslint-eslint-rules/dist/rules"
   ]
 }
