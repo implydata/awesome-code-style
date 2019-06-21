@@ -4,11 +4,10 @@ module.exports = {
     "tslint:recommended",
     "tslint-react",
     "tslint-config-prettier",
-    "tslint-plugin-prettier",
+    "tslint-plugin-prettier"
   ],
   "jsRules": {},
   "rules": {
-    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
     "interface-name": [false],
     "curly": [true, "ignore-same-line"],
     "max-line-length": [false],
@@ -76,13 +75,13 @@ module.exports = {
     "jsx-wrap-multiline": false,
     "prettier": {
       "options": {
-        "trailingComma": "all"
+        "trailingComma": "all",
         "tabWidth": 2,
         "semi": true,
         "singleQuote": true,
         "printWidth": 100,
         "endOfLine": "lf"
       }
-    },
+    }
   }
-};
+}
