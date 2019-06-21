@@ -1,8 +1,10 @@
-{
+module.exports = {
   "defaultSeverity": "error",
   "extends": [
     "tslint:recommended",
-    "tslint-react"
+    "tslint-react",
+    "tslint-config-prettier",
+    "tslint-plugin-prettier",
   ],
   "jsRules": {},
   "rules": {
@@ -13,7 +15,6 @@
     "no-consecutive-blank-lines": [true, 2],
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
     "no-empty": [false],
     "no-arg": true,
     "arrow-parens": false,
@@ -28,7 +29,6 @@
     "no-empty-interface": false,
     "forin": false,
     "indent": [true, "spaces", 2],
-    "ter-indent": [true, 2, { "SwitchCase": 1 }],
     "ban-types": [true,
       ["Object", "Use {} instead."],
       ["String", "Do you mean 'string'?"],
@@ -67,17 +67,22 @@
       "check-typecast",
       "check-type-operator"
     ],
-    "jsx-alignment": true,
     "jsx-boolean-value": [true, "never"],
     "jsx-curly-spacing": [true, "never"],
     "jsx-no-lambda": false,
     "jsx-no-multiline-js": false,
     "jsx-no-string-ref": true,
     "jsx-self-close": true,
-    "jsx-space-before-trailing-slash": false,
-    "jsx-wrap-multiline": false
-  },
-  "rulesDirectory": [
-    "../tslint-eslint-rules/dist/rules"
-  ]
-}
+    "jsx-wrap-multiline": false,
+    "prettier": {
+      "options": {
+        "trailingComma": "all"
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": true,
+        "printWidth": 100,
+        "endOfLine": "lf"
+      }
+    },
+  }
+};
