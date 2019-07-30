@@ -8,6 +8,7 @@ module.exports = {
   ],
   "jsRules": {},
   "rules": {
+    "file-name-casing": [true, "kebab-case"],
     "interface-name": [false],
     "curly": [true, "ignore-same-line"],
     "max-line-length": [false],
