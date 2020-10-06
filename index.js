@@ -13,7 +13,6 @@ module.exports = {
     "curly": [true, "ignore-same-line"],
     "max-line-length": [false],
     "no-consecutive-blank-lines": [true, 2],
-    "ordered-imports": false,
     "object-literal-sort-keys": false,
     "no-empty": [false],
     "no-arg": true,
