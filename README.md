@@ -1,12 +1,15 @@
 # awesome-code-style
+
 Style guidelines for your favorite projects that use TypeScript and SCSS
 
 ## Installation
+
 `$ npm i -D tslint stylelint awesome-code-style`
 
 ## Usage
 
 ### tslint.json
+
 ```
 {
   "extends": "awesome-code-style/tslint.json",
@@ -20,6 +23,7 @@ Style guidelines for your favorite projects that use TypeScript and SCSS
 ```
 
 ### sasslint.json
+
 ```
  {
   "extends": "awesome-code-style/sasslint.json",
@@ -29,8 +33,23 @@ Style guidelines for your favorite projects that use TypeScript and SCSS
 
 ```
 
+## package.json
+
+```
+      "prettier": {
+        "trailingComma": "all",
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": true,
+        "printWidth": 100,
+        "arrowParens": "avoid"
+      }
+```
+
 ## Usual npm script commands
+
 Here are some commands you might wanna add to your package.json file:
+
 ```
 {
   "scripts": {
