@@ -4,6 +4,7 @@ module.exports = {
     "tslint:recommended",
     "tslint-react",
     "tslint-config-prettier",
+    "tslint-lines-between-class-members",
     "tslint-plugin-prettier"
   ],
   "jsRules": {},
@@ -82,6 +83,7 @@ module.exports = {
         "printWidth": 100,
         "arrowParens": "avoid"
       }
-    }
+    },
+    "lines-between-class-members": [true, 1]
   }
 }
