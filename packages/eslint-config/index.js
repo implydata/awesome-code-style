@@ -26,35 +26,19 @@ module.exports = {
     'no-bitwise': 'error',
     'no-caller': 'error',
     'no-eval': 'error',
-    'no-multiple-empty-lines': [
-      'error',
-      {
-        max: 2,
-      },
-    ],
+    'no-multiple-empty-lines': ['error', { max: 2 }],
     'no-new-wrappers': 'error',
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
     'one-var': ['error', 'never'],
     'prefer-object-spread': 'warn',
     'radix': 'error',
-    'spaced-comment': [
-      'error',
-      'always',
-      {
-        markers: ['/'],
-      },
-    ],
+    'spaced-comment': ['error', 'always', { markers: ['/'] }],
 
     // eslint (overrides)
     'no-empty': 'off',
     'no-fallthrough': 'off',
-    'prefer-const': [
-      'error',
-      {
-        destructuring: 'all',
-      },
-    ],
+    'prefer-const': ['error', { destructuring: 'all' }],
 
     // @typescript-eslint (adds)
     '@typescript-eslint/ban-tslint-comment': 'error',
@@ -139,12 +123,7 @@ module.exports = {
     // eslint-plugin-react (adds)
     'react/jsx-boolean-value': ['error', 'never'],
     'react/jsx-curly-brace-presence': ['warn', 'never'],
-    'react/jsx-curly-spacing': [
-      'error',
-      {
-        when: 'never',
-      },
-    ],
+    'react/jsx-curly-spacing': ['error', { when: 'never' }],
     'react/jsx-no-bind': ['error', { allowArrowFunctions: true }],
     'react/self-closing-comp': 'error',
 
