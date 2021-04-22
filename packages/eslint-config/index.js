@@ -83,13 +83,6 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/unbound-method': 'off',
 
-    // eslint-plugin-header
-    'header/header': [
-      2,
-      'block',
-      { pattern: 'Licensed to the Apache Software Foundation \\(ASF\\).+' },
-    ],
-
     // eslint-plugin-simple-import-sort, eslint-plugin-import
     'simple-import-sort/imports': [
       'error',
