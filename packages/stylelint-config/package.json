@@ -1,8 +1,6 @@
 {
-  "name": "awesome-code-style",
-  "private": true,
-  "version": "2.1.0",
-  "description": "Style guidelines for your favorite projects that use TypeScript and SCSS",
+  "name": "@awesome-code-style/stylelint-config",
+  "description": "Stylelint configuration for projects that use SCSS",
   "scripts": {
     "test": "exit 0"
   },
@@ -16,11 +14,15 @@
     "url": "https://github.com/implydata/awesome-code-style/issues"
   },
   "homepage": "https://github.com/implydata/awesome-code-style#readme",
-  "workspaces": [
-    "packages/*"
-  ],
-  "prettier": "@awesome-code-style/prettier-config",
+  "main": "index.js",
+  "dependencies": {
+    "stylelint-config-recommended": "^4.0.0",
+    "stylelint-scss": "^3.19.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">= 13.0.0"
+  },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "stylelint": "^13.12.0"
   }
 }

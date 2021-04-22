@@ -1,7 +1,7 @@
-{
-  "extends": "stylelint-config-recommended",
-  "plugins": ["stylelint-scss"],
-  "rules": {
+module.exports = {
+  extends: "stylelint-config-recommended",
+  plugins: ["stylelint-scss"],
+  rules: {
     "indentation": 2,
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
