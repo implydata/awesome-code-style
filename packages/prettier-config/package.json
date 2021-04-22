@@ -1,6 +1,7 @@
 {
   "name": "@awesome-code-style/prettier-config",
   "description": "Prettier configuration for projects that use TypeScript, SCSS, and React",
+  "version": "3.0.0",
   "scripts": {
     "test": "exit 0"
   },

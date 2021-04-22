@@ -1,7 +1,6 @@
 {
   "name": "awesome-code-style",
   "private": true,
-  "version": "2.1.0",
   "description": "Style guidelines for your favorite projects that use TypeScript and SCSS",
   "scripts": {
     "test": "exit 0"

@@ -1,6 +1,7 @@
 {
   "name": "@awesome-code-style/stylelint-config",
   "description": "Stylelint configuration for projects that use SCSS",
+  "version": "3.0.0",
   "scripts": {
     "test": "exit 0"
   },
