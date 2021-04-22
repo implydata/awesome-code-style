@@ -4,59 +4,63 @@ Style guidelines for your favorite projects that use TypeScript and SCSS
 
 ## Installation
 
-`$ npm i -D tslint stylelint awesome-code-style`
+```sh
+$ npm i -D @awesome-code-style/eslint-config @awesome-code-style/prettier-config @awesome-code-style/stylelint-config
+```
+
+If you are using npm v6 and below, you will also need the following:
+
+```sh
+$ npm i -D eslint stylelint prettier @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-header eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-simple-import-sort eslint-plugin-unicorn
+```
 
 ## Usage
 
-### tslint.json
+### .eslintrc
 
-```
+```jsonc
 {
-  "extends": "awesome-code-style/tslint.json",
-  "rules": {
+  "extends": "@awesome-code-style",
+  "parserOptions": {
+    "project": "tsconfig.json" // path to your tsconfig.json file
   },
-  "linterOptions": {
-    "format": "useful"
-  }
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {}
 }
-
 ```
 
 ### sasslint.json
 
-```
- {
-  "extends": "awesome-code-style/sasslint.json",
-  "rules": {
-  }
+```json
+{
+  "extends": "@awesome-code-style/stylelint-config",
+  "rules": {}
 }
-
 ```
 
-## package.json
+### package.json
 
-```
-      "prettier": {
-        "trailingComma": "all",
-        "tabWidth": 2,
-        "semi": true,
-        "singleQuote": true,
-        "printWidth": 100,
-        "arrowParens": "avoid"
-      }
+```json
+{
+  "prettier": "@awesome-code-style/prettier-config"
+}
 ```
 
 ## Usual npm script commands
 
 Here are some commands you might wanna add to your package.json file:
 
-```
+```json
 {
   "scripts": {
-    "tslint": "./node_modules/.bin/tslint -c tslint.json --project tsconfig.json --formatters-dir ./node_modules/awesome-code-style/formatter 'src/**/*.ts?(x)'",
-    "tslint-fix": "npm run tslint -- --fix",
-    "tslint-changed-only": "git diff --diff-filter=ACMR --name-only | grep -E \\.tsx\\?$ | xargs ./node_modules/.bin/tslint -c tslint.json --project tsconfig.json --formatters-dir ./node_modules/awesome-code-style/formatter",
-    "tslint-fix-changed-only": "npm run tslint-changed-only -- --fix",
+    "eslint": "eslint 'src/**/*.ts?(x)'",
+    "eslint-fix": "npm run eslint -- --fix",
+    "eslint-changed-only": "git diff --diff-filter=ACMR --cached --name-only | grep -E \\.tsx\\?$ | xargs ./node_modules/.bin/eslint",
+    "eslint-fix-changed-only": "npm run eslint-changed-only -- --fix",
     "sasslint": "./node_modules/.bin/stylelint --config sasslint.json 'src/**/*.scss'",
     "sasslint-fix": "npm run sasslint -- --fix",
     "sasslint-changed-only": "git diff --diff-filter=ACMR --name-only | grep -E \\.scss$ | xargs ./node_modules/.bin/stylelint --config sasslint.json",
