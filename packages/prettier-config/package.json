@@ -1,8 +1,10 @@
 {
-  "name": "awesome-code-style",
-  "description": "Style guidelines for your favorite projects that use TypeScript and SCSS",
-  "private": true,
+  "name": "@awesome-code-style/prettier-config",
+  "description": "Prettier configuration for projects that use TypeScript, SCSS, and React",
   "version": "2.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "exit 0"
   },
@@ -16,12 +18,12 @@
     "url": "https://github.com/implydata/awesome-code-style/issues"
   },
   "homepage": "https://github.com/implydata/awesome-code-style#readme",
-  "workspaces": [
-    "packages/*"
-  ],
-  "prettier": "@awesome-code-style/prettier-config",
+  "main": "index.json",
+  "dependencies": {},
+  "peerDependencies": {
+    "prettier": ">= 2.0.0"
+  },
   "devDependencies": {
-    "lerna": "^4.0.0",
     "prettier": "^2.2.1"
   }
 }

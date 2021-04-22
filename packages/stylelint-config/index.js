@@ -1,10 +1,7 @@
-{
-  "extends": "stylelint-config-recommended",
-  "plugins": [
-    "stylelint-scss",
-    "stylelint-prettier"
-  ],
-  "rules": {
+module.exports = {
+  extends: "stylelint-config-recommended",
+  plugins: ["stylelint-scss"],
+  rules: {
     "indentation": 2,
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
@@ -12,7 +9,6 @@
     "scss/dollar-variable-colon-space-after": "always",
     "scss/dollar-variable-colon-space-before": "never",
     "no-descending-specificity": null,
-    "no-duplicate-selectors": null,
-    "prettier/prettier": true
+    "no-duplicate-selectors": null
   }
 }
