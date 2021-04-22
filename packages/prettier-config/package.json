@@ -1,7 +1,7 @@
 {
   "name": "@awesome-code-style/prettier-config",
   "description": "Prettier configuration for projects that use TypeScript, SCSS, and React",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "publishConfig": {
     "access": "public"
   },
@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/implydata/awesome-code-style#readme",
   "main": "index.json",
-  "dependencies": {},
   "peerDependencies": {
     "prettier": ">= 2.0.0"
   },

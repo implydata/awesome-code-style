@@ -1,7 +1,7 @@
 {
   "name": "@awesome-code-style/stylelint-config",
   "description": "Stylelint configuration for projects that use SCSS",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "publishConfig": {
     "access": "public"
   },
