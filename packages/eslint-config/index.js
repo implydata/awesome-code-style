@@ -3,8 +3,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -13,7 +11,6 @@ module.exports = {
   },
   plugins: [
     'eslint-plugin-header',
-    'eslint-plugin-react',
     'eslint-plugin-unicorn',
     'eslint-plugin-import',
     'simple-import-sort',
@@ -112,17 +109,6 @@ module.exports = {
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',
     'import/no-extraneous-dependencies': 'error',
-
-    // eslint-plugin-react (adds)
-    'react/jsx-boolean-value': ['error', 'never'],
-    'react/jsx-curly-brace-presence': ['warn', 'never'],
-    'react/jsx-curly-spacing': ['error', { when: 'never' }],
-    'react/jsx-no-bind': ['error', { allowArrowFunctions: true }],
-    'react/self-closing-comp': 'error',
-
-    // eslint-plugin-react (overrides)
-    'react/prop-types': 'off',
-    'react/jsx-no-target-blank': 'off',
 
     // eslint-plugin-unicorn
     'unicorn/filename-case': 'error',

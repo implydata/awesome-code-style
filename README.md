@@ -24,6 +24,18 @@ $ npm i -D eslint stylelint prettier @typescript-eslint/eslint-plugin eslint-con
   "parserOptions": {
     "project": "tsconfig.json" // path to your tsconfig.json file
   },
+  "rules": {}
+}
+```
+
+If your project uses React, you can also extend the react ruleset:
+
+```jsonc
+{
+  "extends": ["@awesome-code-style", "@awesome-code-style/eslint-config/react"],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
   "settings": {
     "react": {
       "version": "detect"
