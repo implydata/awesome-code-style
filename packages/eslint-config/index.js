@@ -13,6 +13,7 @@ module.exports = {
     'eslint-plugin-header',
     'eslint-plugin-unicorn',
     'eslint-plugin-import',
+    'eslint-plugin-unused-imports',
     'simple-import-sort',
     '@typescript-eslint',
   ],
@@ -113,5 +114,12 @@ module.exports = {
 
     // eslint-plugin-unicorn
     'unicorn/filename-case': 'error',
+
+    // eslint-plugin-unused-imports
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+    ],
   },
 };
