@@ -74,6 +74,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off', // TODO: use?
     '@typescript-eslint/no-unsafe-assignment': 'off', // TODO: use?
     '@typescript-eslint/no-unsafe-call': 'off', // TODO: use?
     '@typescript-eslint/no-unsafe-member-access': 'off', // TODO: use?

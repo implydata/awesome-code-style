@@ -22,10 +22,9 @@
   "prettier": "@awesome-code-style/prettier-config",
   "devDependencies": {
     "lerna": "^4.0.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.4.1"
   },
   "volta": {
-    "node": "14.17.3",
-    "npm": "7.20.2"
+    "node": "16.13.0"
   }
 }

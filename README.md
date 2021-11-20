@@ -11,7 +11,13 @@ $ npm i -D @awesome-code-style/eslint-config @awesome-code-style/prettier-config
 If you are using npm v6 and below, you will also need the following:
 
 ```sh
-$ npm i -D eslint stylelint prettier @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-simple-import-sort eslint-plugin-unicorn
+$ npm i -D eslint stylelint prettier @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-import eslint-plugin-simple-import-sort eslint-plugin-unicorn eslint-plugin-unused-imports
+```
+
+And if you are using React (and npm <= 6):
+
+```sh
+$ npm i -D eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 ## Usage
@@ -71,7 +77,7 @@ Here are some commands you might wanna add to your package.json file:
   "scripts": {
     "autofix": "npm run eslint-fix && npm run sasslint-fix && npm run prettify",
     "eslint": "eslint 'src/**/*.ts?(x)'",
-    "eslint-fix": "npm run eslint -- --fix",
+    "eslint-fix": "npm run eslint -- --fix --report-unused-disable-directives",
     "eslint-changed-only": "git diff --diff-filter=ACMR --cached --name-only | grep -E \\.tsx\\?$ | xargs ./node_modules/.bin/eslint",
     "eslint-fix-changed-only": "npm run eslint-changed-only -- --fix",
     "sasslint": "./node_modules/.bin/stylelint --config sasslint.json 'src/**/*.scss'",
