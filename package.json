@@ -2,7 +2,7 @@
   "name": "awesome-code-style",
   "description": "Style guidelines for your favorite projects that use TypeScript and SCSS",
   "private": true,
-  "version": "2.1.0",
+  "version": "0.0.0",
   "scripts": {
     "test": "exit 0"
   },
@@ -21,10 +21,10 @@
   ],
   "prettier": "@awesome-code-style/prettier-config",
   "devDependencies": {
-    "lerna": "^4.0.0",
-    "prettier": "^2.4.1"
+    "lerna": "^6.0.1",
+    "prettier": "^2.7.1"
   },
   "volta": {
-    "node": "16.13.0"
+    "node": "16.18.0"
   }
 }
