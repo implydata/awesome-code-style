@@ -21,7 +21,7 @@
   ],
   "prettier": "@awesome-code-style/prettier-config",
   "devDependencies": {
-    "lerna": "^4.0.0",
+    "lerna": "^6.0.1",
     "prettier": "^2.4.1"
   },
   "volta": {
