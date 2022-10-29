@@ -11,7 +11,6 @@ module.exports = {
   },
   plugins: [
     'eslint-plugin-header',
-    'eslint-plugin-unicorn',
     'eslint-plugin-import',
     'eslint-plugin-unused-imports',
     'simple-import-sort',
@@ -112,9 +111,6 @@ module.exports = {
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',
     'import/no-extraneous-dependencies': 'error',
-
-    // eslint-plugin-unicorn
-    'unicorn/filename-case': 'error',
 
     // eslint-plugin-unused-imports
     'unused-imports/no-unused-imports': 'error',

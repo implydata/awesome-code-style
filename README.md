@@ -11,7 +11,7 @@ $ npm i -D @awesome-code-style/eslint-config @awesome-code-style/prettier-config
 If you are using npm v6 and below, you will also need the following:
 
 ```sh
-$ npm i -D eslint stylelint prettier @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-import eslint-plugin-simple-import-sort eslint-plugin-unicorn eslint-plugin-unused-imports
+$ npm i -D eslint stylelint prettier @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-import eslint-plugin-simple-import-sort eslint-plugin-unused-imports
 ```
 
 And if you are using React (and npm <= 6):
