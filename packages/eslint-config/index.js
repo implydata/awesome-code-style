@@ -9,13 +9,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
-  plugins: [
-    'eslint-plugin-header',
-    'eslint-plugin-import',
-    'eslint-plugin-unused-imports',
-    'simple-import-sort',
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint', 'import', 'simple-import-sort', 'unused-imports'],
   rules: {
     // eslint (adds)
     'eqeqeq': ['error', 'smart'],
@@ -40,6 +34,7 @@ module.exports = {
     // @typescript-eslint (adds)
     '@typescript-eslint/ban-tslint-comment': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
+    '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports' }],
     '@typescript-eslint/lines-between-class-members': [
       'warn',
       'always',
