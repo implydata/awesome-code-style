@@ -21,8 +21,8 @@
   ],
   "prettier": "@awesome-code-style/prettier-config",
   "devDependencies": {
-    "lerna": "^6.0.1",
-    "prettier": "^2.7.1"
+    "@changesets/cli": "^2.26.0",
+    "prettier": "^2.8.4"
   },
   "volta": {
     "node": "16.18.0"
