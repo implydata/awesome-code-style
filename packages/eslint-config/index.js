@@ -34,6 +34,7 @@ module.exports = {
     // @typescript-eslint (adds)
     '@typescript-eslint/ban-tslint-comment': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
+    '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports' }],
     '@typescript-eslint/lines-between-class-members': [
       'warn',
       'always',
