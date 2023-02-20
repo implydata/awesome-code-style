@@ -20,4 +20,4 @@ jobs:
           cache: 'npm'
       - run: npm install --prefer-offline --no-audit
       - name: Check for changes requiring a changeset
-        run: npx changeset status --since=master
+        run: npx changeset status --since=origin/master
