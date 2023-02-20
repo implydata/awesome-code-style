@@ -9,13 +9,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
-  plugins: [
-    'eslint-plugin-header',
-    'eslint-plugin-import',
-    'eslint-plugin-unused-imports',
-    'simple-import-sort',
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint', 'import', 'simple-import-sort', 'unused-imports'],
   rules: {
     // eslint (adds)
     'eqeqeq': ['error', 'smart'],
