@@ -1,0 +1,10 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@awesome-code-style/eslint-config": "4.2.0",
+    "@awesome-code-style/prettier-config": "4.0.1",
+    "@awesome-code-style/stylelint-config": "4.0.1"
+  },
+  "changesets": []
+}
