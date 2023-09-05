@@ -1,7 +1,7 @@
 {
   "name": "@awesome-code-style/eslint-config",
   "description": "ESLint configuration for TypeScript projects that might use React",
-  "version": "5.0.0-beta.0",
+  "version": "5.0.0-beta.1",
   "publishConfig": {
     "access": "public"
   },
