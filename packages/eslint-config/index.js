@@ -55,7 +55,6 @@ module.exports = {
     '@typescript-eslint/non-nullable-type-assertion-style': 'warn',
     '@typescript-eslint/prefer-function-type': 'error',
     '@typescript-eslint/prefer-includes': 'warn',
-    '@typescript-eslint/prefer-nullish-coalescing': ['warn', { ignorePrimitives: { string: true } }],
     '@typescript-eslint/prefer-readonly': 'warn',
     '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
     '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
@@ -64,7 +63,11 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'error',
 
     // @typescript-eslint (overrides)
+    '@typescript-eslint/consistent-indexed-object-style': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/dot-notation': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-base-to-string': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -76,6 +79,9 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call': 'off', // TODO: use?
     '@typescript-eslint/no-unsafe-member-access': 'off', // TODO: use?
     '@typescript-eslint/no-unsafe-return': 'off', // TODO: use?
+    '@typescript-eslint/prefer-for-of': 'off',
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    '@typescript-eslint/prefer-optional-chain': 'off',
     '@typescript-eslint/restrict-plus-operands': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/unbound-method': 'off',
