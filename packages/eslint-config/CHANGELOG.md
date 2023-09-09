@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 5.0.0-beta.2
+
+### Patch Changes
+
+- [`2385528`](https://github.com/implydata/awesome-code-style/commit/238552837a96723aac36b690c3d55e21f1a6f143) Thanks [@jgoz](https://github.com/jgoz)! - Add some rule overrides
+
 ## 5.0.0-beta.1
 
 ### Patch Changes
