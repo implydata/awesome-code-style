@@ -1,5 +1,17 @@
 # @awesome-code-style/eslint-config
 
+## 5.0.0
+
+### Major Changes
+
+- [#26](https://github.com/implydata/awesome-code-style/pull/26) [`14c2558`](https://github.com/implydata/awesome-code-style/commit/14c25583523ebbf7137dd33dd5bb1e7c92d76e00) Thanks [@jgoz](https://github.com/jgoz)! - Use latest versions of @typescript-eslint and prettier
+
+### Patch Changes
+
+- [`2385528`](https://github.com/implydata/awesome-code-style/commit/238552837a96723aac36b690c3d55e21f1a6f143) Thanks [@jgoz](https://github.com/jgoz)! - Add some rule overrides
+
+- [#28](https://github.com/implydata/awesome-code-style/pull/28) [`cdbad17`](https://github.com/implydata/awesome-code-style/commit/cdbad17b000196568741b078e69d674fafd24fd4) Thanks [@jgoz](https://github.com/jgoz)! - Set @typescript-eslint/prefer-nullish-coalescing to warn, ignore strings
+
 ## 5.0.0-beta.2
 
 ### Patch Changes
