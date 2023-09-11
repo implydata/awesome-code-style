@@ -1,13 +1,13 @@
 module.exports = {
-  extends: 'stylelint-config-recommended',
-  plugins: ['stylelint-scss'],
+  extends: 'stylelint-config-recommended-scss',
   rules: {
-    'indentation': 2,
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': true,
     'scss/at-import-no-partial-leading-underscore': true,
+    'scss/at-import-partial-extension': null,
     'scss/dollar-variable-colon-space-after': null,
     'scss/dollar-variable-colon-space-before': 'never',
+    'scss/operator-no-newline-after': null,
     'no-descending-specificity': null,
     'no-duplicate-selectors': null,
   },
