@@ -1,5 +1,15 @@
 # @awesome-code-style/stylelint-config
 
+## 5.0.0
+
+### Major Changes
+
+- [`ab2ecfe`](https://github.com/implydata/awesome-code-style/commit/ab2ecfeec8fbb354f0879788190375845674123c) Thanks [@jgoz](https://github.com/jgoz)! - Stylelint 15+
+
+### Patch Changes
+
+- [`2385528`](https://github.com/implydata/awesome-code-style/commit/238552837a96723aac36b690c3d55e21f1a6f143) Thanks [@jgoz](https://github.com/jgoz)! - Add some rule overrides
+
 ## 5.0.0-beta.1
 
 ### Major Changes
