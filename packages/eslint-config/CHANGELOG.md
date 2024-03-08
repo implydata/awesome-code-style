@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 5.1.0
+
+### Minor Changes
+
+- [`64ee42c`](https://github.com/implydata/awesome-code-style/commit/64ee42c9b4aa0c6e8232a3ef790fe0fb8a2f683e) Thanks [@jgoz](https://github.com/jgoz)! - Support typescript-eslint 7.x
+
 ## 5.0.0
 
 ### Major Changes
