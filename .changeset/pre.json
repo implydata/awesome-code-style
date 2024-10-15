@@ -6,5 +6,7 @@
     "@awesome-code-style/prettier-config": "5.0.0",
     "@awesome-code-style/stylelint-config": "5.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "heavy-tips-study"
+  ]
 }

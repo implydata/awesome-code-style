@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 6.0.0-beta.0
+
+### Major Changes
+
+- [`864d4a6`](https://github.com/implydata/awesome-code-style/commit/864d4a6ff86b85b7af9de1a5325db3e1bec30bae) Thanks [@jgoz](https://github.com/jgoz)! - Target eslint 9, typescript-eslint 8, switch to flat config
+
 ## 5.1.0
 
 ### Minor Changes
