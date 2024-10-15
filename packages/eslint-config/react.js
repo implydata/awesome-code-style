@@ -37,6 +37,12 @@ export const reactConfigs = {
         'react/jsx-no-target-blank': 'off',
       },
     },
+    {
+      files: ['**/*.spec.jsx', '**/*.spec.tsx'],
+      rules: {
+        'react/display-name': 'off',
+      },
+    },
   ],
   reactTypeChecked: [
     {
