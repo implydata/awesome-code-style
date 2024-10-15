@@ -52,7 +52,7 @@ To enable [type-checked rules](https://typescript-eslint.io/getting-started/type
 
 ```js
 import awesomeCodeStyle, { configs } from '@awesome-code-style/eslint-config';
-import awesomeCodeStyleReact, { reactConfigs } from '@awesome-code-style/eslint-config';
+import awesomeCodeStyleReact, { reactConfigs } from '@awesome-code-style/eslint-config/react';
 
 export default [
   ...awesomeCodeStyle,
