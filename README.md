@@ -8,13 +8,7 @@ Style guidelines for your favorite projects that use TypeScript and SCSS
 $ npm i -D @awesome-code-style/eslint-config @awesome-code-style/prettier-config @awesome-code-style/stylelint-config
 ```
 
-If you are using npm v6 and below, you will also need the following:
-
-```sh
-$ npm i -D eslint stylelint prettier @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-import eslint-plugin-simple-import-sort eslint-plugin-unused-imports
-```
-
-And if you are using React (and npm <= 6):
+If you are using React:
 
 ```sh
 $ npm i -D eslint-plugin-react eslint-plugin-react-hooks
@@ -22,33 +16,54 @@ $ npm i -D eslint-plugin-react eslint-plugin-react-hooks
 
 ## Usage
 
-### .eslintrc
+### eslint.config.js (Flat config)
 
-```jsonc
-{
-  "extends": "@awesome-code-style",
-  "parserOptions": {
-    "project": "tsconfig.json" // path to your tsconfig.json file
+```js
+import awesomeCodeStyle from '@awesome-code-style/eslint-config';
+
+export default [
+  ...awesomeCodeStyle,
+  {
+    // (Optional) globs for local overrides
+    files: ['**/*.{js,mjs,ts}'],
+    rules: {},
   },
-  "rules": {}
-}
+];
 ```
 
 If your project uses React, you can also extend the react ruleset:
 
-```jsonc
-{
-  "extends": ["@awesome-code-style", "@awesome-code-style/eslint-config/react"],
-  "parserOptions": {
-    "project": "tsconfig.json"
+```js
+import awesomeCodeStyle from '@awesome-code-style/eslint-config';
+import awesomeCodeStyleReact from '@awesome-code-style/eslint-config/react';
+
+export default [
+  ...awesomeCodeStyle,
+  ...awesomeCodeStyleReact,
+  {
+    // (Optional) globs for local overrides
+    files: ['**/*.{js,mjs,jsx,ts,tsx}'],
+    rules: {},
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+];
+```
+
+To enable [type-checked rules](https://typescript-eslint.io/getting-started/typed-linting) (recommended), you can extend the `typeChecked` and/or `reactTypeChecked` configs:
+
+```js
+import awesomeCodeStyle, { configs } from '@awesome-code-style/eslint-config';
+import awesomeCodeStyleReact, { reactConfigs } from '@awesome-code-style/eslint-config';
+
+export default [
+  ...awesomeCodeStyle,
+  ...configs.typeChecked,
+  ...reactConfigs.reactTypeChecked,
+  {
+    // (Optional) globs for local overrides
+    files: ['**/*.{js,mjs,ts,tsx}'],
+    rules: {},
   },
-  "rules": {}
-}
+];
 ```
 
 ### sasslint.json
