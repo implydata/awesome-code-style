@@ -38,15 +38,17 @@ export const reactConfigs = {
       },
     },
   ],
-  reactTypeChecked: {
-    files: ['**/*.tsx'],
-    plugins: {
-      'jsx-expressions': jsxExpressionsPlugin,
+  reactTypeChecked: [
+    {
+      files: ['**/*.tsx'],
+      plugins: {
+        'jsx-expressions': jsxExpressionsPlugin,
+      },
+      rules: {
+        'jsx-expressions/strict-logical-expressions': ['error', { allowString: true }],
+      },
     },
-    rules: {
-      'jsx-expressions/strict-logical-expressions': ['error', { allowString: true }],
-    },
-  },
+  ],
   disableReactTypeChecked: {
     ...baseConfigs.disableTypeChecked,
     rules: {
