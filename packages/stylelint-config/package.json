@@ -20,12 +20,12 @@
   "homepage": "https://github.com/implydata/awesome-code-style#readme",
   "main": "index.js",
   "dependencies": {
-    "stylelint-config-recommended-scss": "^13.0.0"
+    "stylelint-config-recommended-scss": "^14.1.0"
   },
   "peerDependencies": {
-    "stylelint": ">= 15.0.0"
+    "stylelint": ">= 16.1.0"
   },
   "devDependencies": {
-    "stylelint": "^15.10.3"
+    "stylelint": "^16.10.0"
   }
 }
