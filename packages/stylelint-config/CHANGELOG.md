@@ -1,5 +1,11 @@
 # @awesome-code-style/stylelint-config
 
+## 6.0.0
+
+### Major Changes
+
+- [`81e0007`](https://github.com/implydata/awesome-code-style/commit/81e00077311c2f4602579ae0cfd8cab2d4c5781b) Thanks [@jgoz](https://github.com/jgoz)! - Require stylelint 16+
+
 ## 5.0.0
 
 ### Major Changes
