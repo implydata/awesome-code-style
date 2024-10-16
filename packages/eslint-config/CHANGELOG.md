@@ -1,5 +1,15 @@
 # @awesome-code-style/eslint-config
 
+## 6.0.0-beta.1
+
+### Patch Changes
+
+- [`653e77f`](https://github.com/implydata/awesome-code-style/commit/653e77fa62a8d5e50476f5b12070ac3f6185e9c9) Thanks [@jgoz](https://github.com/jgoz)! - Add caughtErrorsIgnorePattern to allow (e)
+
+- [`bd3e7a5`](https://github.com/implydata/awesome-code-style/commit/bd3e7a55466306562ee49f4327261759f2296e9e) Thanks [@jgoz](https://github.com/jgoz)! - Make reactTypeChecked an array for consistency
+
+- [`518784f`](https://github.com/implydata/awesome-code-style/commit/518784feda26722b0478fd68692e7e9963c0a49b) Thanks [@jgoz](https://github.com/jgoz)! - Ignore react/display-name in tests
+
 ## 6.0.0-beta.0
 
 ### Major Changes
