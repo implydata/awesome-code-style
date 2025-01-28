@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 6.0.1
+
+### Patch Changes
+
+- [#38](https://github.com/implydata/awesome-code-style/pull/38) [`18c5db4`](https://github.com/implydata/awesome-code-style/commit/18c5db42064bf7434219af5379f530c53832d327) Thanks [@jgoz](https://github.com/jgoz)! - Update peer dependencies
+
 ## 6.0.0
 
 ### Major Changes
