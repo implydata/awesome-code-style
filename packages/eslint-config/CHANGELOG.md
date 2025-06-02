@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 6.0.2
+
+### Patch Changes
+
+- [`66ec313`](https://github.com/implydata/awesome-code-style/commit/66ec313b87deaffe2e58d99549740cfacd4472b7) Thanks [@jgoz](https://github.com/jgoz)! - Switch to default @stylistic package
+
 ## 6.0.1
 
 ### Patch Changes
