@@ -1,6 +1,5 @@
 import js from '@eslint/js';
-import stylisticJs from '@stylistic/eslint-plugin-js';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
+import stylistic from '@stylistic/eslint-plugin';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
@@ -15,8 +14,7 @@ export const configs = {
     prettier,
     {
       plugins: {
-        '@stylistic/js': stylisticJs,
-        '@stylistic/ts': stylisticTs,
+        '@stylistic': stylistic,
         'import': importPlugin,
         'simple-import-sort': simpleImportSortPlugin,
         'unused-imports': unusedImportsPlugin,
@@ -68,17 +66,15 @@ export const configs = {
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/prefer-for-of': 'off',
 
-        // @stylistic/js (adds)
-        '@stylistic/js/no-multiple-empty-lines': ['error', { max: 2 }],
-        '@stylistic/js/spaced-comment': ['error', 'always', { markers: ['/'] }],
-
-        // @stylistic/ts (adds)
-        '@stylistic/ts/lines-between-class-members': [
+        // @stylistic (adds)
+        '@stylistic/no-multiple-empty-lines': ['error', { max: 2 }],
+        '@stylistic/spaced-comment': ['error', 'always', { markers: ['/'] }],
+        '@stylistic/lines-between-class-members': [
           'warn',
           'always',
           { exceptAfterSingleLine: true },
         ],
-        '@stylistic/ts/padding-line-between-statements': [
+        '@stylistic/padding-line-between-statements': [
           'warn',
 
           { blankLine: 'always', prev: '*', next: 'interface' },
