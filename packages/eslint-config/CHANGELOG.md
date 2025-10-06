@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 6.1.1
+
+### Patch Changes
+
+- [#43](https://github.com/implydata/awesome-code-style/pull/43) [`ab9ce84`](https://github.com/implydata/awesome-code-style/commit/ab9ce8421633e9e5e4df36cf2773c0a3cf5db348) Thanks [@jgoz](https://github.com/jgoz)! - Use defineConfig
+
 ## 6.1.0
 
 ### Minor Changes
