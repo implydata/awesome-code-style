@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 6.1.0
+
+### Minor Changes
+
+- [#41](https://github.com/implydata/awesome-code-style/pull/41) [`b634c84`](https://github.com/implydata/awesome-code-style/commit/b634c84d9db63a9360b174a8691dabe2716a66ee) Thanks [@jgoz](https://github.com/jgoz)! - Bump react-hooks, tweak switch-exhaustiveness-check
+
 ## 6.0.2
 
 ### Patch Changes
