@@ -1,11 +1,12 @@
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxExpressionsPlugin from '@jgoz/eslint-plugin-jsx-expressions';
+import { defineConfig } from 'eslint/config';
 
 import { configs as baseConfigs } from './index.js';
 
 export const reactConfigs = {
-  default: [
+  default: defineConfig([
     {
       settings: {
         react: {
@@ -43,8 +44,8 @@ export const reactConfigs = {
         'react/display-name': 'off',
       },
     },
-  ],
-  reactTypeChecked: [
+  ]),
+  reactTypeChecked: defineConfig([
     {
       files: ['**/*.tsx'],
       plugins: {
@@ -54,14 +55,13 @@ export const reactConfigs = {
         'jsx-expressions/strict-logical-expressions': ['error', { allowString: true }],
       },
     },
-  ],
-  disableReactTypeChecked: {
-    ...baseConfigs.disableTypeChecked,
+  ]),
+  disableReactTypeChecked: defineConfig(baseConfigs.disableTypeChecked, {
     rules: {
       ...baseConfigs.disableTypeChecked.rules,
       'jsx-expressions/strict-logical-expressions': 'off',
     },
-  },
+  }),
 };
 
 export default reactConfigs.default;
