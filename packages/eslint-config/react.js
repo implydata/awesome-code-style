@@ -19,7 +19,7 @@ export const reactConfigs = {
       plugins: {
         'react-hooks': reactHooksPlugin,
       },
-      rules: reactHooksPlugin.configs.recommended.rules,
+      extends: ['react-hooks/recommended'],
     },
     {
       files: ['**/*.jsx', '**/*.tsx'],

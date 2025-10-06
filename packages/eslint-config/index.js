@@ -155,7 +155,10 @@ export const configs = {
         '@typescript-eslint/prefer-readonly': 'warn',
         '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
         '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
-        '@typescript-eslint/switch-exhaustiveness-check': 'error',
+        '@typescript-eslint/switch-exhaustiveness-check': [
+          'error',
+          { considerDefaultExhaustiveForUnions: true },
+        ],
 
         // @typescript-eslint (overrides)
         '@typescript-eslint/dot-notation': 'off',
