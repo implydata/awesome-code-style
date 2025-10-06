@@ -4,13 +4,14 @@ import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import unusedImportsPlugin from 'eslint-plugin-unused-imports';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
 export const configs = {
-  default: [
+  default: defineConfig([
     js.configs.recommended,
-    ...tseslint.configs.recommended,
-    ...tseslint.configs.stylistic,
+    tseslint.configs.recommended,
+    tseslint.configs.stylistic,
     prettier,
     {
       plugins: {
@@ -128,11 +129,11 @@ export const configs = {
         ],
       },
     },
-  ],
+  ]),
 
-  typeChecked: [
-    ...tseslint.configs.recommendedTypeCheckedOnly,
-    ...tseslint.configs.stylisticTypeCheckedOnly,
+  typeChecked: defineConfig([
+    tseslint.configs.recommendedTypeCheckedOnly,
+    tseslint.configs.stylisticTypeCheckedOnly,
     {
       languageOptions: {
         parserOptions: {
@@ -175,7 +176,7 @@ export const configs = {
         '@typescript-eslint/unbound-method': 'off',
       },
     },
-  ],
+  ]),
 
   disableTypeChecked: tseslint.configs.disableTypeChecked,
 };
