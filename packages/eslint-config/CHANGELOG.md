@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 6.1.2
+
+### Patch Changes
+
+- [#45](https://github.com/implydata/awesome-code-style/pull/45) [`c2ca1e7`](https://github.com/implydata/awesome-code-style/commit/c2ca1e7721e23f2e683c265ba96950d4f8f84ffc) Thanks [@jgoz](https://github.com/jgoz)! - Add npm trusted publishing support for automated releases via OIDC
+
 ## 6.1.1
 
 ### Patch Changes
