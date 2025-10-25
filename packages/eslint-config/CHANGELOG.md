@@ -1,5 +1,11 @@
 # @awesome-code-style/eslint-config
 
+## 6.2.0
+
+### Minor Changes
+
+- [#47](https://github.com/implydata/awesome-code-style/pull/47) [`dd2d780`](https://github.com/implydata/awesome-code-style/commit/dd2d7800dd2e069eb183d04f4596ae5ba75e9f6b) Thanks [@jgoz](https://github.com/jgoz)! - Bump to eslint-plugin-react-hooks 7
+
 ## 6.1.2
 
 ### Patch Changes
