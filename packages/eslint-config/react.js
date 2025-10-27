@@ -16,7 +16,7 @@ export const reactConfigs = {
     },
     reactPlugin.configs.flat.recommended,
     reactPlugin.configs.flat['jsx-runtime'],
-    reactHooksPlugin.configs.flat.recommended,
+    reactHooksPlugin.configs.flat?.recommended ?? reactHooksPlugin.configs['flat/recommended'],
     {
       files: ['**/*.jsx', '**/*.tsx'],
       rules: {
